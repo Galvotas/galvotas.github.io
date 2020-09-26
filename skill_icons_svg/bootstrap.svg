@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 368 368" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m344 0h-320c-13.230469 0-24 10.769531-24 24v320c0 13.230469 10.769531 24 24 24h320c13.230469 0 24-10.769531 24-24v-320c0-13.230469-10.769531-24-24-24zm8 344c0 4.414062-3.59375 8-8 8h-320c-4.40625 0-8-3.585938-8-8v-320c0-4.40625 3.59375-8 8-8h320c4.40625 0 8 3.59375 8 8zm0 0" fill="#0074d9" data-original="#000000" style="" class=""/><path xmlns="http://www.w3.org/2000/svg" d="m216 64h-112c-4.414062 0-8 3.585938-8 8v224c0 4.425781 3.585938 8 8 8h112c30.878906 0 56-25.128906 56-56v-16c0-20.34375-10.902344-38.191406-27.175781-48 16.273437-9.808594 27.175781-27.65625 27.175781-48v-16c0-30.878906-25.121094-56-56-56zm40 168v16c0 22.054688-17.945312 40-40 40h-104v-96h104c22.054688 0 40 17.945312 40 40zm0-96c0 22.054688-17.945312 40-40 40h-104v-96h104c22.054688 0 40 17.945312 40 40zm0 0" fill="#0074d9" data-original="#000000" style="" class=""/><script>// Promises 
+var _eid_promises = {}; 
+if (typeof isignDebug !== 'function') { 
+    var isignDebug = function(msg){}; 
+} 
+// Turn the incoming message from extension 
+// into pending Promise resolving 
+window.addEventListener("message", function(event) { 
+    if(event.source !== window) return; 
+    if(event.data.src &amp;&amp; (event.data.src === "isign-background.js")) { 
+        isignDebug("Page received: "); 
+        isignDebug(event.data); 
+        // Get the promise 
+        if(event.data.nonce) { 
+            var p = _eid_promises[event.data.nonce]; 
+            // resolve 
+            if(event.data.result === "ok") { 
+                if(event.data.signature !== undefined) { 
+                    if(p){ 
+                        p.resolve({hex: event.data.signature}); 
+                    } 
+                } else if(event.data.certificate !== undefined) { 
+                    if(p){ 
+                        var info = {hex: event.data.certificate, module: event.data.module, slot: event.data.slot, name: event.data.name, issuer: event.data.issuer, isLoginCertificate: event.data.isLoginCertificate, isSigningCertificate: event.data.isSigningCertificate, validTo: event.data.validTo, log: event.data.log, driversList: event.data.driversList}; 
+                        if(event.data.hardwareManufacturer){
+                            info.hardwareManufacturer = event.data.hardwareManufacturer;
+                        }
+                        if(event.data.hardwareLabel){
+                            info.hardwareLabel = event.data.hardwareLabel;
+                        }
+                        p.resolve(info); 
+                    } 
+                } else if(event.data.nativeHostVersion !== undefined) { 
+                    var result = {nativeHostVersion: event.data.nativeHostVersion, driversFound: event.data.driversFound, driversList: event.data.driversList}; 
+                    if(event.data.log){ 
+                        result.log = event.data.log; 
+                    } 
+                    if(p){ 
+                        p.resolve(result); 
+                    } 
+                } else if(event.data.version !== undefined) { 
+                    var result = {version: event.data.extension + "/" + event.data.version, driversFound: event.data.driversFound}; 
+                    if(event.data.log){ 
+                        result.log = event.data.log; 
+                    } 
+                    if(p){ 
+                        p.resolve(result); 
+                    } 
+                } else { 
+                    isignDebug("No idea how to handle message"); 
+                    isignDebug(event.data); 
+                } 
+            } else { 
+                // reject 
+                if(p){ 
+                    p.reject(new Error(JSON.stringify(event.data))); 
+                } 
+            } 
+            delete _eid_promises[event.data.nonce]; 
+        } else { 
+            isignDebug("No nonce in event msg"); 
+        } 
+    } 
+}, false); 
+ 
+ 
+function IsignChromeSigning() { 
+    function nonce() { 
+        var val = ""; 
+        var hex = "abcdefghijklmnopqrstuvwxyz0123456789"; 
+        for(var i = 0; i &lt; 16; i++) val += hex.charAt(Math.floor(Math.random() * hex.length)); 
+        return val; 
+    } 
+ 
+    function messagePromise(msg) { 
+        return new Promise(function(resolve, reject) { 
+            // amend with necessary metadata 
+            msg['nonce'] = nonce(); 
+            msg['src'] = 'isign-page.js'; 
+            // send message 
+            window.postMessage(msg, "*"); 
+            // and store promise callbacks 
+            _eid_promises[msg.nonce] = { 
+                resolve: resolve, 
+                reject: reject 
+            }; 
+        }); 
+    } 
+    this.getCertificate = function(options) { 
+        if(options.policyId &amp;&amp; (typeof options.policyIds === 'undefined' || options.policyIds.length == 0)){ 
+            options.policyIds = new Array(); 
+            options.policyIds.push(options.policyId); 
+        } 
+        if(typeof options.residency === 'undefined') { 
+            options.residency = ''; 
+        } 
+        var msg = {type: 'CERT', lang: options.lang, certificatePurpose: options.certificatePurpose, isInitial: options.isInitial, policyId: options.policyId, policyIds: options.policyIds, bulkSigning: options.bulkSigning, residency: options.residency}; 
+        isignDebug("getCertificate()"); 
+        return messagePromise(msg); 
+    }; 
+    this.sign = function(cert, hash, options) { 
+        var msg = {type: 'SIGN', cert: cert.hex, hash: hash.hex, module: cert.module, slot: cert.slot, isLoginCertificate: cert.isLoginCertificate, isSigningCertificate: cert.isSigningCertificate, hashAlgorithm: hash.type, lang: options.lang}; 
+        isignDebug("sign()"); 
+        return messagePromise(msg); 
+    }; 
+    this.getVersion = function() { 
+        isignDebug("getVersion()"); 
+        return messagePromise({ 
+            type: 'VERSION' 
+        }); 
+    }; 
+}</script></g></svg>

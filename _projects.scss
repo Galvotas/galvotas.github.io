@@ -1,0 +1,135 @@
+.projects__section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rem;
+}
+.portfolio {
+  width: 100%;
+  padding: 9rem 10rem;
+  background-color: #252525;
+  border-top: 1px solid rgba(221, 221, 221, 0.151);
+  border-bottom: 1px solid rgba(221, 221, 221, 0.151);
+  h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+    color: #fff;
+  }
+}
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 0.7fr));
+  justify-content: center;
+  background: transparent;
+  gap: 4rem 10rem;
+  padding: 3rem 10rem;
+}
+.outer-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+.card {
+  position: relative;
+  transition: transform 0.8s;
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+  border: none;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+.img {
+  border-radius: 2rem;
+  height: 70%;
+  object-fit: cover;
+  background-position: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.project-bottom {
+  min-height: 30%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.project-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+.view-code,
+.view-site {
+  padding: 12px 24px;
+  border-radius: 2rem;
+  background-color: transparent;
+  border: 2px solid #0074d9;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: all 0.6s ease;
+  &:hover {
+    background-color: #0074d9;
+    color: #fff;
+  }
+}
+.view-code {
+  color: #000;
+}
+.view-site {
+  border: 3px solid transparent;
+  background-color: #222;
+  margin-bottom: 1rem;
+  &:hover {
+    border: 3px solid transparent;
+  }
+}
+.project-desc {
+  display: flex;
+  flex-direction: column;
+  .project-name {
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .portfolio {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 5rem;
+    }
+  }
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(80%, 0.7fr));
+    padding: 1rem;
+  }
+}
