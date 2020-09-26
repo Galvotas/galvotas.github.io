@@ -18,10 +18,11 @@ $blue: #0074d9;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  transform: translateX(400px);
   transition: all 0.4s linear;
   z-index: 3;
   border-bottom-left-radius: 2rem;
+  transform: translateX(300px);
+
   a {
     margin: 0;
     font-size: 1.5rem;
@@ -31,7 +32,17 @@ $blue: #0074d9;
 }
 
 .modul.on {
-  transform: translateX(0rem);
+  animation: slideIn 0.5s ease-in-out 0.3s forwards;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .left-bar {
