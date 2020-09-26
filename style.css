@@ -917,7 +917,6 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  max-width: 100vw;
 }
 
 .header {
