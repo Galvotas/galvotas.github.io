@@ -18,9 +18,12 @@ html {
   font-size: 62.5%;
   margin: 0;
   scroll-behavior: smooth;
+  position: relative;
+  width: 100%;
 }
 body {
   font-family: "Montserrat", sans-serif;
+  position: relative;
   overflow-x: hidden;
 }
 .header {

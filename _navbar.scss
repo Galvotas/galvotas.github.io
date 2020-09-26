@@ -12,7 +12,7 @@ $blue: #0074d9;
   position: absolute;
   width: 30rem;
   background-color: rgba(221, 221, 221, 0.068);
-  right: -1rem;
+  right: 0.5rem;
   height: 5rem;
   top: 9rem;
   display: flex;
@@ -22,7 +22,6 @@ $blue: #0074d9;
   z-index: 3;
   border-bottom-left-radius: 2rem;
   transform: translateX(300px);
-
   a {
     margin: 0;
     font-size: 1.5rem;
@@ -32,17 +31,7 @@ $blue: #0074d9;
 }
 
 .modul.on {
-  animation: slideIn 0.5s ease-in-out 0.3s forwards;
-}
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  transform: translateX(0) scale(1.05);
 }
 
 .left-bar {
