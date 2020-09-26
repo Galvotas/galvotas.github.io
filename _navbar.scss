@@ -5,22 +5,20 @@ $blue: #0074d9;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 5rem;
-  margin-bottom: 8rem;
   position: relative;
+  padding: 2rem;
 }
 .modul {
   position: absolute;
-  width: 150px;
+  width: 30rem;
   background-color: rgba(221, 221, 221, 0.068);
-  right: 0rem;
-  height: 40vh;
-  top: 0rem;
+  right: -1rem;
+  height: 5rem;
+  top: 9rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  transform: translateX(1000px);
+  transform: translateX(400px);
   transition: all 0.4s linear;
   z-index: 3;
   border-bottom-left-radius: 2rem;
@@ -29,9 +27,6 @@ $blue: #0074d9;
     font-size: 1.5rem;
     color: #fff;
     font-weight: bolder;
-    &:first-child {
-      margin-top: 5rem;
-    }
   }
 }
 
@@ -112,12 +107,8 @@ $blue: #0074d9;
   display: none;
 }
 .hamburger-box {
-  width: 6rem;
-  height: 5rem;
-  top: 1rem;
-  right: 1rem;
   z-index: 99;
-  position: absolute;
+  padding: 0.5rem 2rem;
   cursor: pointer;
   .burger-btn {
     width: 100%;

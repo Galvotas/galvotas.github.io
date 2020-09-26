@@ -9,32 +9,27 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 3rem 5rem;
-  margin-bottom: 8rem;
   position: relative;
+  padding: 2rem;
 }
 
 .modul {
   position: absolute;
-  width: 150px;
+  width: 30rem;
   background-color: rgba(221, 221, 221, 0.068);
-  right: 0rem;
-  height: 40vh;
-  top: 0rem;
+  right: -1rem;
+  height: 5rem;
+  top: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-transform: translateX(1000px);
-          transform: translateX(1000px);
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
   z-index: 3;
@@ -46,10 +41,6 @@
   font-size: 1.5rem;
   color: #fff;
   font-weight: bolder;
-}
-
-.modul a:first-child {
-  margin-top: 5rem;
 }
 
 .modul.on {
@@ -145,12 +136,8 @@
 }
 
 .hamburger-box {
-  width: 6rem;
-  height: 5rem;
-  top: 1rem;
-  right: 1rem;
   z-index: 99;
-  position: absolute;
+  padding: 0.5rem 2rem;
   cursor: pointer;
 }
 
@@ -216,18 +203,19 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 15rem;
+  width: 100%;
 }
 
 .portfolio {
   width: 100%;
-  padding: 9rem 10rem;
+  padding: 9rem 4rem;
   background-color: #252525;
   border-top: 1px solid rgba(221, 221, 221, 0.151);
   border-bottom: 1px solid rgba(221, 221, 221, 0.151);
 }
 
 .portfolio h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
   letter-spacing: 0.2rem;
   color: #fff;
@@ -237,14 +225,18 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(600px, 0.7fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(600px, 0.7fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: transparent;
-  gap: 4rem 10rem;
-  padding: 3rem 10rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7rem;
+  gap: 4rem;
+  padding: 1rem 4rem;
 }
 
 .outer-card {
@@ -287,7 +279,6 @@
 }
 
 .project-bottom {
-  min-height: 30%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(40%, 1fr))[auto-fit];
@@ -298,7 +289,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3rem 0;
+  padding: 1rem;
 }
 
 .project-buttons {
@@ -315,6 +306,7 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   height: 100%;
+  padding: 2rem;
 }
 
 .view-code,
@@ -359,13 +351,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 1rem 0rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
 }
 
 .project-desc .project-name {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-family: sans-serif;
   font-weight: bolder;
-  margin-bottom: 1rem;
   text-align: left;
 }
 
@@ -393,9 +388,17 @@
     font-size: 5rem;
   }
   .cards {
-    -ms-grid-columns: (minmax(80%, 0.7fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(80%, 0.7fr));
-    padding: 1rem;
+    gap: 4rem;
+    padding: 5rem;
+    -ms-grid-columns: 0.8fr 0.8fr;
+        grid-template-columns: 0.8fr 0.8fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cards {
+    -ms-grid-columns: 0.9fr;
+        grid-template-columns: 0.9fr;
   }
 }
 
@@ -406,7 +409,7 @@
 }
 
 .skills-section .skills-h1 {
-  padding-left: 10rem;
+  padding-left: 4rem;
 }
 
 .skills-section .skills-h1 h1 {
@@ -430,20 +433,24 @@
   background-color: #0074d9;
 }
 
+.skill-type {
+  text-align: center;
+}
+
 .skill-cards {
-  width: 80%;
+  width: 100%;
   color: #fff;
-  padding: 1rem 2rem 0 10rem;
+  padding: 4rem;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  display: -ms-grid;
-  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 6rem 4rem;
   margin-top: 6rem;
 }
@@ -486,9 +493,21 @@
   width: 2.2rem;
 }
 
+@media only screen and (max-width: 900px) {
+  .skills-h1 {
+    padding: 1rem;
+    text-align: center;
+  }
+  .skill-cards {
+    width: 90%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
+
 .contact-header {
   width: 100%;
-  padding: 9rem 10rem;
+  padding: 9rem 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,7 +521,7 @@
 }
 
 .contact-header h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
   letter-spacing: 0.2rem;
   color: #fff;
@@ -528,7 +547,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .contact-left {
@@ -576,9 +595,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact-center .help {
@@ -587,9 +606,7 @@
   border-bottom: 2px solid rgba(221, 219, 219, 0.432);
   display: inline-block;
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  text-align: center;
 }
 
 .contact-center .help::after {
@@ -612,9 +629,9 @@
           flex-direction: column;
   padding-bottom: 2rem;
   width: 100%;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .inputs input {
@@ -676,6 +693,7 @@
   max-width: 100%;
   margin-bottom: 2rem;
   border: none;
+  max-height: 350px;
   background-color: transparent;
   border: 2px solid rgba(221, 219, 219, 0.432);
   padding: 0.3rem;
@@ -752,7 +770,8 @@
             justify-content: center;
   }
   .contact-right .textarea {
-    width: 80%;
+    min-width: 60%;
+    max-width: 80%;
   }
   .contact-right .contact-right {
     grid-column: auto;
@@ -770,6 +789,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: auto;
+  }
+  .contact-center .inputs input {
+    max-width: 300px;
   }
 }
 
@@ -842,12 +865,14 @@
   color: #fff;
   padding: 1rem;
   font-family: cursive;
+  font-size: 1.2rem;
 }
 
 .rights-msg {
   color: #fff;
   padding: 1rem;
   font-family: cursive;
+  font-size: 1.2rem;
 }
 
 * {
@@ -855,11 +880,6 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-*::focus,
-*::active {
-  outline: none;
 }
 
 html {
@@ -890,8 +910,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 10rem;
 }
 
 .image-con {
@@ -901,8 +922,8 @@ body {
           transform: rotateX(0.14turn);
   border-radius: 50%;
   border: 5px solid #fff;
-  height: 380px;
-  width: 380px;
+  max-height: 380px;
+  max-width: 380px;
   margin: 0 auto;
   position: relative;
   -webkit-box-shadow: 1px 1px 4px #fff;
@@ -930,6 +951,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding: 0 1rem;
 }
 
 .presentation-con h3 {
@@ -984,6 +1006,9 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
+  html {
+    font-size: 45%;
+  }
   body {
     padding: 0;
   }
@@ -1007,6 +1032,16 @@ body {
   }
   .presentation-con p {
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mid-con {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .image-con {
+    min-width: 250px;
   }
 }
 /*# sourceMappingURL=style.css.map */
