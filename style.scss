@@ -37,9 +37,9 @@ body {
 }
 .mid-con {
   width: 100%;
-  margin: auto auto;
   display: grid;
   align-items: center;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-top: 10rem;
 }
@@ -48,8 +48,8 @@ body {
   transform: rotateX(0.14turn);
   border-radius: 50%;
   border: 5px solid #fff;
-  height: 100%;
-  max-width: 90%;
+  max-height: 100%;
+  max-width: 80%;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -141,16 +141,15 @@ body {
 @media only screen and (max-width: 600px) {
   .mid-con {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 90%;
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
-    padding: 1rem;
   }
   .image-con {
     min-width: 250px;
-    margin: 0;
+    margin: 0 auto;
   }
   .presentation-con {
-    width: 90%;
+    width: 100%;
   }
 }
