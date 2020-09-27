@@ -138,6 +138,7 @@
 .hamburger-box {
   z-index: 99;
   padding: 0.5rem 2rem;
+  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -916,8 +917,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-top: 10rem;
 }
 
@@ -928,10 +929,19 @@ body {
           transform: rotateX(0.14turn);
   border-radius: 50%;
   border: 5px solid #fff;
-  max-height: 380px;
-  max-width: 380px;
+  height: 100%;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: 1px 1px 4px #fff;
           box-shadow: 1px 1px 4px #fff;
 }
@@ -942,7 +952,6 @@ body {
   border-radius: 50%;
   background-color: #fff;
   border: 1rem solid #222222;
-  padding: 0.3rem;
 }
 
 .presentation-con {
@@ -957,7 +966,6 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0 1rem;
 }
 
 .presentation-con h3 {
@@ -965,12 +973,14 @@ body {
   color: rgba(221, 219, 219, 0.432);
   font-weight: 500;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .presentation-con h1 {
   font-size: 4rem;
   font-weight: bolder;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .presentation-con p {
@@ -1043,8 +1053,11 @@ body {
 
 @media only screen and (max-width: 600px) {
   .mid-con {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .image-con {
     min-width: 250px;

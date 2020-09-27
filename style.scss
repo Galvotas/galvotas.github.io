@@ -39,7 +39,7 @@ body {
   margin: auto auto;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-top: 10rem;
 }
 .image-con {
@@ -47,10 +47,13 @@ body {
   transform: rotateX(0.14turn);
   border-radius: 50%;
   border: 5px solid #fff;
-  max-height: 380px;
-  max-width: 380px;
+  height: 100%;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 1px 1px 4px #fff;
 
   .circle {
@@ -59,7 +62,6 @@ body {
     border-radius: 50%;
     background-color: #fff;
     border: 1rem solid #222222;
-    padding: 0.3rem;
   }
 }
 
@@ -68,17 +70,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 1rem;
   h3 {
     font-size: 2.5rem;
     color: rgba(221, 219, 219, 0.432);
     font-weight: 500;
     margin-bottom: 1rem;
+    text-align: center;
   }
   h1 {
     font-size: 4rem;
     font-weight: bolder;
     margin-bottom: 2rem;
+    text-align: center;
   }
   p {
     line-height: 2rem;
@@ -136,7 +139,10 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .mid-con {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
   }
   .image-con {
     min-width: 250px;
