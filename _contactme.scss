@@ -108,6 +108,8 @@ $blue: #0074d9;
   border: 2px solid $blue;
   cursor: pointer;
   color: #fff;
+  display: grid;
+  column-span: 1 / -1;
 }
 
 .contact-right {
@@ -141,7 +143,9 @@ $blue: #0074d9;
     }
   }
 }
-
+.submit-res {
+  display: none;
+}
 @media only screen and (max-width: 1000px) {
   .contact-header {
     display: flex;
@@ -161,6 +165,12 @@ $blue: #0074d9;
     align-items: center;
     padding: 0;
     margin: 0;
+  }
+  .submit-main {
+    display: none;
+  }
+  .submit-res {
+    display: block;
   }
   .contact-right {
     display: flex;
