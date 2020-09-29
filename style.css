@@ -244,6 +244,10 @@
   height: 100%;
   padding: 2rem;
   position: relative;
+  border-radius: 1rem;
+  border: 3px solid #fff;
+  -webkit-box-shadow: 1px 1px 2px #fff;
+          box-shadow: 1px 1px 2px #fff;
 }
 
 .card:after {
@@ -254,6 +258,7 @@
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
 }
 
 .card1 {
@@ -287,6 +292,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 0.5rem;
 }
 
 .card-inner-content {
@@ -387,7 +393,7 @@
   text-align: left;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .portfolio {
     padding-left: 0;
     padding-right: 0;
@@ -404,15 +410,32 @@
   .portfolio h1 {
     font-size: 5rem;
   }
+  .cards {
+    -ms-grid-columns: 0.8fr;
+        grid-template-columns: 0.8fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .cards {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
     grid-auto-rows: 300px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0;
     padding: 0;
+    padding-right: 2rem;
+  }
+  html {
+    font-size: 35%;
   }
   .card-inner-content h1 {
     font-size: 3rem;

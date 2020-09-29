@@ -35,6 +35,9 @@
   height: 100%;
   padding: 2rem;
   position: relative;
+  border-radius: 1rem;
+  border: 3px solid #fff;
+  box-shadow: 1px 1px 2px #fff;
 }
 .card:after {
   content: "";
@@ -44,6 +47,7 @@
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
 }
 .card1 {
   background-image: url(barbershop.jpg);
@@ -65,6 +69,7 @@
   position: relative;
   z-index: 3;
   flex-direction: column;
+  border-radius: 0.5rem;
 }
 
 .card-inner-content {
@@ -142,7 +147,7 @@
 
 @media only screen and(max-width: 1200px) {
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .portfolio {
     padding-left: 0;
     padding-right: 0;
@@ -153,13 +158,24 @@
       font-size: 5rem;
     }
   }
+  .cards {
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 600px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
+
     grid-auto-rows: 300px;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
+    padding-right: 2rem;
+  }
+  html {
+    font-size: 35%;
   }
   .card-inner-content {
     h1 {
