@@ -21,7 +21,7 @@ check(e, `card4`, `https://galvotas.github.io/little_quiz/` )
 check(e, `card3`, `https://galvotas.github.io/validation_form/`)
 check(e, `card1`, `https://galvotas.github.io/barbershop/`)
 check(e, `card2`, `https://galvotas.github.io/Restaurant/`)
-    check(e, `project1-code`, `https://github.com/Galvotas/little_quiz.git`)
+    check(e, `code1`, `https://github.com/Galvotas/little_quiz.git`)
     check(e, `project2-code`, `https://github.com/Galvotas/validation_form.git`)
     check(e, `project3-code`, `https://github.com/Galvotas/barbershop.git`)
 
