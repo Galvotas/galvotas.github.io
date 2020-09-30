@@ -147,3 +147,8 @@ $blue: #0074d9;
   transform: rotate(-45deg) translateY(-0.3rem);
   z-index: 3;
 }
+@media only screen and (max-width: 680px) {
+  .modul {
+    background-color: #000;
+  }
+}

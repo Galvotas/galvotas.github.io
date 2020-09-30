@@ -15,15 +15,20 @@ line3.classList.toggle('active3')
 modul.classList.toggle('on')
 })
 
+window.addEventListener('scroll', () => {
+    modul.classList.remove('on')
+    line1.classList.remove('active1')
+line2.classList.remove('active2')
+line3.classList.remove('active3')
+
+})
 window.addEventListener('click', (e) => {
 
 check(e, `card4`, `https://galvotas.github.io/little_quiz/` )
 check(e, `card3`, `https://galvotas.github.io/validation_form/`)
 check(e, `card1`, `https://galvotas.github.io/barbershop/`)
 check(e, `card2`, `https://galvotas.github.io/Restaurant/`)
-    check(e, `code1`, `https://github.com/Galvotas/little_quiz.git`)
-    check(e, `project2-code`, `https://github.com/Galvotas/validation_form.git`)
-    check(e, `project3-code`, `https://github.com/Galvotas/barbershop.git`)
+    
 
 })
 

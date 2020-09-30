@@ -31,7 +31,7 @@
 .cards {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-auto-rows: 350px;
   background: transparent;
   gap: 6rem;

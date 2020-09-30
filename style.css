@@ -201,6 +201,12 @@
   z-index: 3;
 }
 
+@media only screen and (max-width: 680px) {
+  .modul {
+    background-color: #000;
+  }
+}
+
 .projects__section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,8 +259,8 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-auto-rows: 350px;
   background: transparent;
   gap: 6rem;
