@@ -17,9 +17,10 @@ modul.classList.toggle('on')
 
 window.addEventListener('click', (e) => {
 
-check(e, `project1-site`, `https://galvotas.github.io/little_quiz/` )
-check(e, `project2-site`, `https://galvotas.github.io/validation_form/`)
-check(e, `project3-site`, `https://galvotas.github.io/barbershop/`)
+check(e, `card4`, `https://galvotas.github.io/little_quiz/` )
+check(e, `card3`, `https://galvotas.github.io/validation_form/`)
+check(e, `card1`, `https://galvotas.github.io/barbershop/`)
+check(e, `card2`, `https://galvotas.github.io/Restaurant/`)
     check(e, `project1-code`, `https://github.com/Galvotas/little_quiz.git`)
     check(e, `project2-code`, `https://github.com/Galvotas/validation_form.git`)
     check(e, `project3-code`, `https://github.com/Galvotas/barbershop.git`)

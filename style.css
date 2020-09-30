@@ -209,31 +209,33 @@
 }
 
 .portfolio {
+  padding: 4rem 0;
   width: 100%;
-  padding: 9rem 4rem;
   background-color: #252525;
   border-top: 1px solid rgba(221, 221, 221, 0.151);
   border-bottom: 1px solid rgba(221, 221, 221, 0.151);
+  margin-bottom: 3rem;
 }
 
 .portfolio h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bolder;
   letter-spacing: 0.2rem;
   color: #fff;
+  margin: auto;
+  text-align: center;
 }
 
 .cards {
-  width: 100%;
+  width: 98%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(450px, auto))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(450px, auto));
   grid-auto-rows: 350px;
   background: transparent;
-  margin-top: 7rem;
   gap: 6rem;
-  padding: 1rem 4rem;
+  padding: 0 1rem;
 }
 
 .card {
@@ -242,12 +244,17 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  padding: 2rem;
   position: relative;
   border-radius: 1rem;
-  border: 3px solid #fff;
-  -webkit-box-shadow: 1px 1px 2px #fff;
-          box-shadow: 1px 1px 2px #fff;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .card:after {
@@ -257,140 +264,24 @@
   height: 100%;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 1rem;
 }
 
 .card1 {
-  background-image: url(barbershop.jpg);
+  background-image: url(barbershop.png);
 }
 
 .card2 {
-  background-image: url(quiz/1.png);
+  background-image: url(restaurant.png);
 }
 
 .card3 {
   background-image: url(formphotos/form.png);
 }
 
-.card-inner {
-  height: 100%;
-  background: #fff;
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1rem;
-  -webkit-box-shadow: 1px 1px 1px #fff;
-          box-shadow: 1px 1px 1px #fff;
-  position: relative;
-  z-index: 3;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 0.5rem;
-}
-
-.card-inner-content {
-  padding: 1rem 0.5rem;
-  color: #000;
-}
-
-.card-inner-content h1 {
-  font-weight: 900;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 3rem;
-  letter-spacing: 0.1rem;
-  color: rgba(255, 255, 255, 0.61);
-  text-shadow: 2px 2px #111;
-}
-
-.card-inner-content p {
-  text-align: center;
-  line-height: 2rem;
-  font-size: 1.2rem;
-  letter-spacing: 0.2rem;
-}
-
-.card-inner-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 80%;
-  padding: 0.3rem;
-}
-
-.view-code,
-.view-site {
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.3rem;
-  background-color: transparent;
-  border: 2px solid #0074d9;
-  cursor: pointer;
-  font-weight: bolder;
-  font-size: 1.5rem;
-  color: #fff;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-}
-
-.view-code:hover,
-.view-site:hover {
-  background-color: #0074d9;
-  color: #fff;
-}
-
-.view-code {
-  color: #000;
-}
-
-.view-site {
-  border: 3px solid transparent;
-  background-color: #222;
-  margin-bottom: 1rem;
-}
-
-.view-site:hover {
-  border: 3px solid transparent;
-}
-
-.project-desc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1rem 0rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 100%;
-}
-
-.project-desc .project-name {
-  font-size: 2.3rem;
-  font-family: sans-serif;
-  font-weight: bolder;
-  text-align: left;
-}
-
-.project-desc h2 {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-align: left;
+.card4 {
+  background-image: url(quiz/1.png);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -411,8 +302,8 @@
     font-size: 5rem;
   }
   .cards {
-    -ms-grid-columns: 0.8fr;
-        grid-template-columns: 0.8fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -421,9 +312,9 @@
 
 @media only screen and (max-width: 600px) {
   .cards {
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
     grid-auto-rows: 300px;
+    -ms-grid-columns: 0.95fr;
+        grid-template-columns: 0.95fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -432,18 +323,6 @@
             justify-content: center;
     margin: 0;
     padding: 0;
-    padding-right: 2rem;
-  }
-  html {
-    font-size: 35%;
-  }
-  .card-inner-content h1 {
-    font-size: 3rem;
-    margin-bottom: 5rem;
-  }
-  .card-inner-content p {
-    font-size: 1.5rem;
-    line-height: 1.7rem;
   }
 }
 
@@ -552,7 +431,7 @@
 
 .contact-header {
   width: 100%;
-  padding: 9rem 4rem;
+  padding: 4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,32 +445,29 @@
 }
 
 .contact-header h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bolder;
   letter-spacing: 0.2rem;
   color: #fff;
+  text-align: center;
+  margin: auto;
 }
 
 .contact-section {
   width: 100%;
-  margin-top: 7rem;
+  margin-top: 4rem;
   position: relative;
 }
 
 .form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto auto;
   color: #fff;
   gap: 3rem;
   border-bottom: 2px solid rgba(221, 219, 219, 0.432);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 2rem 1rem;
 }
 
@@ -606,7 +482,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 5rem;
 }
 
 .contact-left .pinphone {
@@ -627,9 +502,8 @@
 
 .contact-left .pinphone .location,
 .contact-left .pinphone .number {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-left: 2rem;
 }
 
 .contact-center {
@@ -640,9 +514,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .contact-center .help {
@@ -652,6 +523,9 @@
   display: inline-block;
   position: relative;
   text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .contact-center .help::after {
@@ -674,9 +548,6 @@
           flex-direction: column;
   padding-bottom: 2rem;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .inputs input {
@@ -719,47 +590,30 @@
   border: 2px solid #0074d9;
   cursor: pointer;
   color: #fff;
-  display: -ms-grid;
-  display: grid;
-  -webkit-column-span: 1 / -1;
-          column-span: 1 / -1;
 }
 
 .contact-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-column: span 2;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
 }
 
 .contact-right .textarea {
-  max-width: 100%;
   margin-bottom: 2rem;
   border: none;
-  max-height: 350px;
   background-color: transparent;
   border: 2px solid rgba(221, 219, 219, 0.432);
-  padding: 0.3rem;
-  position: relative;
   font-size: 1.4rem;
   color: #fff;
   resize: none;
-}
-
-.contact-right .textarea::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  width: 5rem;
-  height: 4px;
-  background-color: #0074d9;
+  width: 50%;
 }
 
 .contact-right .textarea::-webkit-input-placeholder {
@@ -779,20 +633,26 @@
 }
 
 .submit-res {
-  display: none;
+  grid-column: span 2;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 680px) {
   .contact-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 0;
     padding-right: 0;
   }
@@ -804,54 +664,23 @@
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .contact-left {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .contact-left,
+  .contact-right,
+  .contact-center {
     padding: 0;
     margin: 0;
+    grid-column: span 2;
   }
-  .submit-main {
-    display: none;
-  }
-  .submit-res {
-    display: block;
-  }
-  .contact-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact-right .textarea {
-    min-width: 60%;
-    max-width: 80%;
-  }
-  .contact-right .contact-right {
-    grid-column: auto;
-  }
-  .contact-center {
-    margin-top: 2rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact-center .inputs {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .help {
     margin: auto;
   }
-  .contact-center .inputs input {
-    max-width: 300px;
+  .inputs {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
