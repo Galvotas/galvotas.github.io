@@ -46,9 +46,10 @@
   border-radius: 1rem;
   border: none;
   cursor: pointer;
-  transition: all 0.1s linear;
+  transition: all 0.3s linear;
   &:hover {
     transform: scale(1.01);
+    opacity: 0.7;
   }
 }
 .card:after {
@@ -58,7 +59,7 @@
   height: 100%;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
 }
 .card1 {

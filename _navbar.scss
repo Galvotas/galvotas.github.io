@@ -110,7 +110,7 @@ $blue: #0074d9;
 }
 .hamburger-box {
   z-index: 99;
-  padding: 0.5rem 2rem;
+  padding: 3rem 2rem;
   margin-right: 1rem;
   cursor: pointer;
   .burger-btn {
@@ -122,7 +122,7 @@ $blue: #0074d9;
     justify-content: center;
     position: relative;
     .line {
-      height: 0.1rem;
+      height: 0rem;
       background-color: #fff;
       width: 3rem;
       transition: all 0.5s ease;
@@ -149,6 +149,18 @@ $blue: #0074d9;
 }
 @media only screen and (max-width: 680px) {
   .modul {
-    background-color: #000;
+    transform: translateX(0px);
+    transform: translateY(-1000px);
+    width: 100%;
+    height: 50vh;
+    top: 0;
+    background-color: #222;
+  }
+  .active1 {
+    transform: rotate(45deg) translateY(0.3rem);
+  }
+  .active3 {
+    transform: rotate(-45deg) translateY(-0.6rem);
+    z-index: 3;
   }
 }
