@@ -267,8 +267,8 @@
 }
 
 .cards-wrapper {
-  width: 100%;
-  padding: 0 3rem;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .cards {
@@ -279,7 +279,7 @@
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-auto-rows: 350px;
   background: transparent;
-  gap: 6rem;
+  gap: 3rem;
 }
 
 .card {
@@ -327,6 +327,10 @@
 
 .card4 {
   background-image: url(quiz/1.jpg);
+}
+
+.card5 {
+  background-image: url(/recipeApp.png);
 }
 
 .github-link {
@@ -837,10 +841,8 @@
   padding: 0;
 }
 
-html,
 body {
-  width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
 }
 
 html {

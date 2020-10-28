@@ -28,7 +28,7 @@ check(e, `card4`, `https://galvotas.github.io/little_quiz/` )
 check(e, `card3`, `https://galvotas.github.io/validation_form/`)
 check(e, `card1`, `https://galvotas.github.io/barbershop/`)
 check(e, `card2`, `https://galvotas.github.io/Restaurant/`)
-    
+check(e, `card5`, `https://galvotas.github.io/recipeapp/`)
 
 })
 
@@ -37,3 +37,4 @@ function check(element, classname, link) {
         window.open(`${link}`, '_blank');
     }
 }
+
