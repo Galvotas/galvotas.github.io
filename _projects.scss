@@ -27,6 +27,7 @@
 .cards-wrapper {
   width: 95%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .cards {
   width: 100%;
@@ -47,20 +48,52 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s linear;
+  overflow: hidden;
   &:hover {
-    transform: scale(1.01);
-    opacity: 0.7;
+    opacity: 0.8;
   }
+  
 }
-.card:after {
-  content: "";
+
+.project-description {
   position: absolute;
+  bottom: 0;
+  width: 0%;
+  left: 0;
+  min-height: 10rem;
+  max-height: 10rem;
+  background-color: #fff;
+  color: #333;
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+  padding: 0.8rem 1rem;
+  transform-origin: bottom ;
+  background-color: rgba(51, 51, 51, 0.616);
+  visibility: hidden;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #0074d9;
   border-radius: 1rem;
+  z-index: -1;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+}
+.description-heading { 
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #0074d93f;
+  z-index: -1;
+  color: #fff;
+}
+.description-text {
+  font-size: 1.2rem;
+  color: #fff;
 }
 .card1 {
   background-image: url(barbershop.jpg);
@@ -69,14 +102,12 @@
   background-image: url(restaurant.jpg);
 }
 .card3 {
-  background-image: url(formphotos/form.jpg);
+  background-image: url(RecipesReact.jpg);
 }
 .card4 {
   background-image: url(quiz/1.jpg);
 }
-.card5 {
-  background-image: url(/recipeApp.png);
-}
+
 .github-link {
   position: absolute;
   bottom: 1rem;
@@ -87,7 +118,7 @@
     i {
       font-size: 3rem;
       &:hover {
-        color: #fff;
+        color: #333;
       }
     }
   }

@@ -24,6 +24,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 .header {
   width: 100%;
@@ -105,11 +106,13 @@ body {
 
 @media only screen and (max-width: 1000px) {
   html {
-    font-size: 45%;
+    font-size: 70%;
   }
   body {
     padding: 0;
   }
+ 
+
   .main-con {
     border-radius: 0;
   }

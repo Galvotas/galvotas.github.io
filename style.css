@@ -13,46 +13,6 @@
   padding: 2rem;
 }
 
-.modul {
-  position: absolute;
-  width: 15rem;
-  background-color: rgba(221, 221, 221, 0.068);
-  right: 0.5rem;
-  top: 9rem;
-  height: 35rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-  z-index: 3;
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
-  -webkit-transform: translateX(300px);
-          transform: translateX(300px);
-}
-
-.modul a {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: bolder;
-}
-
-.modul.on {
-  -webkit-transform: translateX(0) scale(1.05);
-          transform: translateX(0) scale(1.05);
-}
-
 .left-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,7 +31,7 @@
   background-color: #0074d9;
   border-radius: 50%;
   padding: 0.8rem 1.6rem;
-  font-weight: bolder;
+  font-weight: 500;
   position: relative;
 }
 
@@ -81,7 +41,7 @@
   width: 100%;
   height: 100%;
   left: 50%;
-  font-weight: lighter;
+  font-weight: 500;
   -webkit-transform: translateY(-15px) rotate(-90deg);
           transform: translateY(-15px) rotate(-90deg);
   -webkit-transform: translateX(-30px);
@@ -93,7 +53,7 @@
   margin-left: 1rem;
   color: #fff;
   position: relative;
-  font-weight: bolder;
+  font-weight: 300;
   letter-spacing: 0.1rem;
 }
 
@@ -105,122 +65,8 @@
   left: 90%;
   bottom: -1rem;
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 300;
   letter-spacing: 0.1rem;
-}
-
-.link {
-  font-size: 1.5rem;
-  list-style: none;
-  padding: 0.5rem 5px;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  border-top: 2px solid transparent;
-  font-weight: 600;
-  margin-right: 7rem;
-}
-
-.link:hover {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-  border-top: 2px solid #0074d9;
-  color: #fff;
-}
-
-.fab.fa-linkedin-in {
-  color: #ec0c35;
-}
-
-.right-bar {
-  position: relative;
-  display: none;
-}
-
-.hamburger-box {
-  z-index: 99;
-  padding: 3rem 2rem;
-  margin-right: 1rem;
-  cursor: pointer;
-}
-
-.hamburger-box .burger-btn {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-}
-
-.hamburger-box .burger-btn .line {
-  height: 0rem;
-  background-color: #fff;
-  width: 3rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  border: 1px solid #fff;
-}
-
-.line1 {
-  -webkit-transform: translateY(-1rem);
-          transform: translateY(-1rem);
-}
-
-.line3 {
-  -webkit-transform: translateY(1rem);
-          transform: translateY(1rem);
-}
-
-.active2 {
-  -webkit-transform: translateX(10rem);
-          transform: translateX(10rem);
-}
-
-.active1 {
-  -webkit-transform: rotate(45deg) translateY(0.3rem);
-          transform: rotate(45deg) translateY(0.3rem);
-}
-
-.active3 {
-  -webkit-transform: rotate(-45deg) translateY(-0.3rem);
-          transform: rotate(-45deg) translateY(-0.3rem);
-  z-index: 3;
-}
-
-@media only screen and (max-width: 680px) {
-  .modul {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    -webkit-transform: translateY(-1000px);
-            transform: translateY(-1000px);
-    width: 100%;
-    height: 50vh;
-    top: 0;
-    background-color: #222;
-  }
-  .active1 {
-    -webkit-transform: rotate(45deg) translateY(0.3rem);
-            transform: rotate(45deg) translateY(0.3rem);
-  }
-  .active3 {
-    -webkit-transform: rotate(-45deg) translateY(-0.6rem);
-            transform: rotate(-45deg) translateY(-0.6rem);
-    z-index: 3;
-  }
 }
 
 .projects__section {
@@ -269,6 +115,7 @@
 .cards-wrapper {
   width: 95%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .cards {
@@ -294,23 +141,58 @@
   cursor: pointer;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  overflow: hidden;
 }
 
 .card:hover {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-.card:after {
+.project-description {
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  left: 0;
+  min-height: 10rem;
+  max-height: 10rem;
+  background-color: #fff;
+  color: #333;
+  border-radius: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+  padding: 0.8rem 1rem;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  background-color: rgba(51, 51, 51, 0.616);
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.project-description::after {
   content: "";
   position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #0074d9;
   border-radius: 1rem;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+          clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+.description-heading {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #0074d93f;
+  z-index: -1;
+  color: #fff;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 .card1 {
@@ -322,15 +204,11 @@
 }
 
 .card3 {
-  background-image: url(formphotos/form.jpg);
+  background-image: url(RecipesReact.jpg);
 }
 
 .card4 {
   background-image: url(quiz/1.jpg);
-}
-
-.card5 {
-  background-image: url(/recipeApp.png);
 }
 
 .github-link {
@@ -345,7 +223,7 @@
 }
 
 .github-link a i:hover {
-  color: #fff;
+  color: #333;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -575,6 +453,11 @@
 .contact-left .pinphone .number {
   font-size: 1.5rem;
   font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+.icon-box {
+  margin-right: 2rem;
 }
 
 .contact-center {
@@ -853,6 +736,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 
 .header {
@@ -961,7 +845,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
   html {
-    font-size: 45%;
+    font-size: 70%;
   }
   body {
     padding: 0;
