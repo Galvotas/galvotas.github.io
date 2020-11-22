@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: bolder;
     letter-spacing: 0.2rem;
     color: #fff;
@@ -72,18 +72,7 @@
   background-color: rgba(51, 51, 51, 0.616);
   visibility: hidden;
   overflow: hidden;
-  &::after {
-    content: "";
-    position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0074d9;
-  border-radius: 1rem;
-  z-index: -1;
-  clip-path: polygon(0 0, 0 100%, 100% 0);
-}
+  
 }
 .description-heading { 
   padding: 0.4rem 0;
@@ -131,7 +120,7 @@
     align-items: center;
     justify-content: center;
     h1 {
-      font-size: 5rem;
+      font-size: 2.5rem;
     }
   }
   .cards {
@@ -142,6 +131,12 @@
 @media only screen and (max-width: 690px) {
   .cards {
     grid-template-columns: 0.8fr;
+  }
+  .project-description {
+    transform: translateX(-500px);
+    &:hover {
+      display: none;
+    }
   }
 }
 @media only screen and (max-width: 600px) {

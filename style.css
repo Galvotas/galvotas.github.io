@@ -26,7 +26,7 @@
 }
 
 .left-bar .logo .a {
-  font-size: 4rem;
+  font-size: 2rem;
   color: #fff;
   background-color: #0074d9;
   border-radius: 50%;
@@ -36,37 +36,12 @@
 }
 
 .left-bar .logo .a::after {
-  content: "A";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  font-weight: 500;
-  -webkit-transform: translateY(-15px) rotate(-90deg);
-          transform: translateY(-15px) rotate(-90deg);
-  -webkit-transform: translateX(-30px);
-          transform: translateX(-30px);
-}
-
-.name-top {
-  font-size: 2rem;
-  margin-left: 1rem;
-  color: #fff;
-  position: relative;
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-}
-
-.name-top::after {
   content: "Andrulis";
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 90%;
-  bottom: -1rem;
-  font-size: 1.8rem;
+  left: 50%;
   font-weight: 300;
-  letter-spacing: 0.1rem;
 }
 
 .projects__section {
@@ -104,7 +79,7 @@
 }
 
 .portfolio h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: bolder;
   letter-spacing: 0.2rem;
   color: #fff;
@@ -169,20 +144,6 @@
   overflow: hidden;
 }
 
-.project-description::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0074d9;
-  border-radius: 1rem;
-  z-index: -1;
-  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
-          clip-path: polygon(0 0, 0 100%, 100% 0);
-}
-
 .description-heading {
   padding: 0.4rem 0;
   border-bottom: 1px solid #0074d93f;
@@ -241,7 +202,7 @@
             justify-content: center;
   }
   .portfolio h1 {
-    font-size: 5rem;
+    font-size: 2.5rem;
   }
   .cards {
     -ms-grid-columns: 1fr 1fr;
@@ -256,6 +217,13 @@
   .cards {
     -ms-grid-columns: 0.8fr;
         grid-template-columns: 0.8fr;
+  }
+  .project-description {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  .project-description:hover {
+    display: none;
   }
 }
 
@@ -314,8 +282,8 @@
   width: 100%;
   color: #fff;
   padding: 4rem;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -394,7 +362,7 @@
 }
 
 .contact-header h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: bolder;
   letter-spacing: 0.2rem;
   color: #fff;
@@ -612,7 +580,6 @@
   }
   .contact-header h1 {
     text-align: center;
-    font-size: 4rem;
   }
   .form {
     -ms-grid-columns: 1fr;
@@ -729,7 +696,6 @@ body {
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
