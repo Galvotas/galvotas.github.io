@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', displaySkills)
         let cardNumber = e.target.dataset.key
         descriptionElement.style.width = "80%"
         descriptionElement.style.visibility = "visible"
+        descriptionElement.innerHTML = ""
 setTimeout(() => {
  descriptionElement.innerHTML = `
 <h3 class="description-heading">${projectData[cardNumber].used}</h3>
@@ -108,19 +109,9 @@ setTimeout(() => {
         descriptionElement.style.width = "0"
         descriptionElement.innerHTML = ""
         descriptionElement.style.visibility = 'hidden'
-
     }))
 
-
-
-
-
-
-//project buttons
-
-
-
-
+//project cards
 
 window.addEventListener('click', (e) => {
 check(e, `card4`, `https://galvotas.github.io/little_quiz/` )
