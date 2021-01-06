@@ -119,6 +119,7 @@ setTimeout(() => {
 //project cards
 
 window.addEventListener('click', (e) => {
+    check(e, `card0`, `https://tanuoma.lt/`)
 check(e, `card4`, `https://galvotas.github.io/little_quiz/` )
 check(e, `card3`, `https://galvotas.github.io/Recipes-React/`)
 check(e, `card1`, `https://galvotas.github.io/barbershop/`)
