@@ -23,6 +23,11 @@ const projectData = [
         id: "3",
         used: "Mostly Used: JS, REST API",
         challenges: "Much value during production here. Mainly working with data from API."
+    },
+    {
+        id: "4",
+        used: "Mostly used: React Hooks, Styled, Formik, REST API",
+        challenges: "Authentication, backend implementation and UX along with structure were the biggest challenges."
     }
     ]
 const skillsData = [

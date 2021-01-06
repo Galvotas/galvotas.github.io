@@ -156,6 +156,12 @@
   color: #fff;
 }
 
+.card0 {
+  background-image: url(landlordreviews.png);
+  position: relative;
+  opacity: 0.5;
+}
+
 .card1 {
   background-image: url(barbershop.jpg);
 }
@@ -244,34 +250,35 @@
 }
 
 .skills-section {
-  margin-top: 10rem;
+  margin: 4rem 0;
   width: 100%;
-  padding-bottom: 10rem;
 }
 
 .skills-section .skills-h1 {
-  padding-left: 4rem;
+  width: 100%;
+  padding: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #252525;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 1px solid rgba(221, 221, 221, 0.151);
+  border-bottom: 1px solid rgba(221, 221, 221, 0.151);
+  margin-bottom: 4rem;
 }
 
 .skills-section .skills-h1 h1 {
-  font-size: 2.5rem;
   color: #fff;
-  font-weight: bolder;
-  margin-bottom: 4rem;
   letter-spacing: 0.2rem;
-  border-bottom: 2px solid;
-  display: inline-block;
   position: relative;
-}
-
-.skills-section .skills-h1 h1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  height: 2px;
-  width: 6rem;
-  background-color: #0074d9;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
 .skill-type {
@@ -281,7 +288,7 @@
 .skill-cards {
   width: 100%;
   color: #fff;
-  padding: 4rem;
+  padding: 1rem 4rem;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   display: -ms-grid;
@@ -292,8 +299,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 6rem 4rem;
-  margin-top: 6rem;
+  gap: 10rem;
 }
 
 .skill-card {
@@ -697,7 +703,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  font-size: 80%;
+  font-size: 70%;
 }
 
 body {
