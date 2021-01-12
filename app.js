@@ -40,33 +40,62 @@ iconUrl: "./skill_icons_svg/html-5.svg"
         iconUrl: "./skill_icons_svg/css-3.svg"
     },
     {
-        skillName: "JavaScript",
+        skillName: "JAVASCRIPT",
         iconUrl: "./skill_icons_svg/js.svg"
-    },
-    {
-        skillName: "SASS",
-        iconUrl: "./skill_icons_svg/sass.svg"
     },
     {
         skillName: "REACT",
         iconUrl: "./skill_icons_svg/react.svg"
     },
     {
-        skillName: "Materialize UI",
+        skillName: "REACT HOOKS",
+        iconUrl: "./skill_icons_svg/hooks.svg"
+    },
+    {
+        skillName: "FORMIK",
+        iconUrl: ""
+    },
+    {
+        skillName: "YUP",
+        iconUrl: ""
+    },
+    {
+        skillName: "STYLED",
+        iconUrl: "./skill_icons_svg/styled_components.svg"
+    },
+    {
+        skillName: "SASS",
+        iconUrl: "./skill_icons_svg/sass.svg"
+    },
+    {
+        skillName: "MATERIAL-UI",
         iconUrl: "./skill_icons_svg/letter-m.svg"
     },
     {
-        skillName: "Bootstrap",
+        skillName: "MATERIALIZE CSS",
+        iconUrl: ""
+    },
+    {
+        skillName: "BOOTSTRAP",
         iconUrl: "./skill_icons_svg/bootstrap.svg"   
+    },
+    {
+        skillName: "REDUX",
+        iconUrl: "./skill_icons_svg/redux.svg"
     },
     {
         skillName: "GIT",
         iconUrl: "./skill_icons_svg/git.svg"
     },
     {
-        skillName: "Responsive Design",
+        skillName: "STRAPI",
+        iconUrl: ""
+    },
+    {
+        skillName: "RESPONSIVE DESIGN",
         iconUrl: "./skill_icons_svg/responsive-design-symbol.svg"
-    }
+    },
+    
 ]
 
 
@@ -80,7 +109,7 @@ const displaySkills = () => {
         skillIconContainer.classList.add('skill-icon')
 const skillIcon = document.createElement('img')
 skillIcon.src = `${iconUrl}`
-const skillType = document.createElement('h1')
+const skillType = document.createElement('h3')
 skillType.classList.add('skill-type')
 skillCards.appendChild(card)
 card.appendChild(skillIconContainer)

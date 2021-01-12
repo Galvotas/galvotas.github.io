@@ -289,8 +289,8 @@
   width: 100%;
   color: #fff;
   padding: 1rem 4rem;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(200px, 0.4fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 0.4fr));
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -349,6 +349,13 @@
     width: 90%;
     padding: 2rem;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .skill-cards {
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 

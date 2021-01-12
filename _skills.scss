@@ -32,7 +32,7 @@ $blue: #0074d9;
   width: 100%;
   color: #fff;
   padding: 1rem 4rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.4fr));
   display: grid;
   align-items: center;
   justify-content: center;
@@ -59,6 +59,7 @@ $blue: #0074d9;
 .skill-type {
   margin: auto;
 }
+
 .skill-icon {
   margin: auto 0;
   margin-right: 1rem;
@@ -76,5 +77,10 @@ $blue: #0074d9;
     width: 90%;
     padding: 2rem;
     margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .skill-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
