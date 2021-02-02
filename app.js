@@ -108,7 +108,7 @@ iconUrl: "./skill_icons_svg/html-5.svg"
     
 ]
 
-$("#contactForm").on("submit", async function(e) {
+$("#contactForm").on("submit", function(e) {
 
     e.preventDefault(); //Prevents default submit
     var form = $(this);
@@ -120,6 +120,7 @@ $("#contactForm").on("submit", async function(e) {
     $.ajax({
       type: "POST",
       url: "process.php", // Your form script
+      contentType: "application/json; charset=utf-8",
       data: post_data,
       success: function(msg) {
         $("#mailResponseText").html(msg)
