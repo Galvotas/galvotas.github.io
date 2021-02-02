@@ -108,7 +108,7 @@ iconUrl: "./skill_icons_svg/html-5.svg"
     
 ]
 
-$("#contactForm").on("submit", function(e) {
+/*$("#contactForm").on("submit", function(e) {
 
     e.preventDefault(); //Prevents default submit
     var form = $(this);
@@ -127,7 +127,7 @@ $("#contactForm").on("submit", function(e) {
         $('#submitBtn').prop('disabled', true)
       }
     }); 
-  });
+  });*/
 
 function check(element, classname, link) {
     if(element.target.classList.contains(`${classname}`))  {
