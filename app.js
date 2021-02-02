@@ -1,34 +1,44 @@
 
-const cards = document.querySelectorAll('.card')
-const skillCards = document.querySelector('.skill-cards')
+const skillCards = document.querySelector('.skill-cards');
+const cardsContainer = document.querySelector('.cards');
+const date = document.querySelector('#date')
+
+date.innerHTML = new Date().getFullYear()
+
 let textToDisplay;
+let cards = []
 
 const projectData = [
     {
         id: "0",
-        used: "Mostly Used: HTML/SCSS",
-        challenges: "This project provided good practice with GRID."
+        used: "Mostly used: React Hooks, Styled, Formik, REST API",
+        github: '',
+        challenges: "Authentication, backend implementation."
     },
     {
         id: "1",
         used: "Mostly Used: HTML/SCSS",
+        github: 'https://github.com/Galvotas/barbershop.git',
         challenges: "No challenges endured on this project.",
     },
     {
         id: "2",
-        used: "Mostly Used: React, REST API, Router",
-        challenges: "Router, working with state through multiple components was most challenging in this one."
+        used: "Mostly Used: HTML/SCSS",
+        github: 'https://github.com/Galvotas/Restaurant.git',
+        challenges: "This project provided good practice with GRID."
         }, 
     {
         id: "3",
-        used: "Mostly Used: JS, REST API",
-        challenges: "Much value during production here. Mainly working with data from API."
+        used: "Mostly Used: React, REST API, Router",
+        github: 'https://github.com/Galvotas/Recipes-React.git',
+        challenges: "Great practice with router, global state."
     },
     {
         id: "4",
-        used: "Mostly used: React Hooks, Styled, Formik, REST API",
-        challenges: "Authentication, backend implementation and UX along with structure were the biggest challenges."
-    }
+        used: "Mostly Used: HTML, Bootstrap, SCSS",
+        github: 'https://github.com/Galvotas/peskom.git',
+        challenges: 'Fun and modern static work for Peškom.lt.'
+        }
     ]
 const skillsData = [
     {
@@ -98,7 +108,37 @@ iconUrl: "./skill_icons_svg/html-5.svg"
     
 ]
 
+$("#contactForm").on("submit", async function(e) {
 
+    e.preventDefault(); //Prevents default submit
+    var form = $(this);
+    var post_url = form.attr("action");
+    var post_data = form.serialize(); //Serialized the form data for process.php
+    $("#loader", form).html(
+      '<img src="../img/loader.gif" /> Prašome palaukti...'
+    );
+    $.ajax({
+      type: "POST",
+      url: "process.php", // Your form script
+      data: post_data,
+      success: function(msg) {
+        $("#mailResponseText").html(msg)
+        $('#submitBtn').prop('disabled', true)
+      }
+    }); 
+  });
+
+function check(element, classname, link) {
+    if(element.target.classList.contains(`${classname}`))  {
+        window.open(`${link}`, '_blank');
+    }
+}
+
+function check(element, classname, link) {
+    if(element.target.classList.contains(`${classname}`))  {
+        window.open(`${link}`, '_blank');
+    }
+}
 
 const displaySkills = () => {
     skillsData.forEach(skill => {
@@ -119,45 +159,80 @@ skillType.innerHTML = `${skillName}`
     })
 }
 
-document.addEventListener('DOMContentLoaded', displaySkills)
+const createProjectCard = (githubLink, index) => {
+    const card = document.createElement('div')
+    card.className = `card card${index}`
+    card.setAttribute('data-key', index)
+    let c = `
+    <div class="project-description"></div>
+    ${githubLink && `
+    <div class="github-link">
+      <a
+        href="${githubLink}"
+        target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+`}
+    `
+    card.innerHTML = c
+    cardsContainer.appendChild(card)
+    cards.push(card)
+}
 
+const createCards = () => {
+    projectData.map((project, index) => {
+        const {github} = project
+        return createProjectCard(github, index)
+    })
+}
 
-    cards.forEach(card => card.addEventListener('mouseenter', (e) => {
-        const descriptionElement = e.target.children[0]
-        let cardNumber = e.target.dataset.key
-        descriptionElement.style.width = "80%"
-        descriptionElement.style.visibility = "visible"
-        descriptionElement.innerHTML = ""
+const cardEnter = (cards) => {
+cards.forEach(card => card.addEventListener('mouseenter', (e) => {
+    const descriptionElement = e.target.children[0]
+    let cardNumber = e.target.dataset.key
+    descriptionElement.style.width = "80%"
+    descriptionElement.style.visibility = "visible"
+    descriptionElement.innerHTML = ""
 setTimeout(() => {
- descriptionElement.innerHTML = `
+descriptionElement.innerHTML = `
 <h3 class="description-heading">${projectData[cardNumber].used}</h3>
 <p class="description-text">${projectData[cardNumber].challenges}</p>
 `
 }, 350)
 }))
+}
 
-    
-
+const cardLeave = (cards) => {
     cards.forEach(card => card.addEventListener('mouseleave', (e) => {
         const descriptionElement = e.target.children[0]
         descriptionElement.style.width = "0"
         descriptionElement.innerHTML = ""
         descriptionElement.style.visibility = 'hidden'
     }))
+}
 
-//project cards
+const doThings = async () => {
+    await createCards()
+    cardEnter(cards)
+    cardLeave(cards)
+}
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    displaySkills()
+    doThings()
+})
 
 window.addEventListener('click', (e) => {
     check(e, `card0`, `https://tanuoma.lt/`)
-check(e, `card4`, `https://galvotas.github.io/little_quiz/` )
+check(e, `card4`, `https://galvotas.github.io/peskom/` )
 check(e, `card3`, `https://galvotas.github.io/Recipes-React/`)
 check(e, `card1`, `https://galvotas.github.io/barbershop/`)
 check(e, `card2`, `https://galvotas.github.io/Restaurant/`)
 })
 
-function check(element, classname, link) {
-    if(element.target.classList.contains(`${classname}`))  {
-        window.open(`${link}`, '_blank');
-    }
-}
+
+
+
+
 

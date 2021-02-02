@@ -175,7 +175,7 @@
 }
 
 .card4 {
-  background-image: url(quiz/1.jpg);
+  background-image: url(peskom.png);
 }
 
 .github-link {
@@ -513,6 +513,10 @@
   font-size: 1.5rem;
 }
 
+.textarea {
+  padding: 0.3rem;
+}
+
 .submit-btn {
   padding: 1rem 3rem;
   width: -webkit-fit-content;
@@ -534,6 +538,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   grid-column: span 2;
   -webkit-box-align: center;
       -ms-flex-align: center;
