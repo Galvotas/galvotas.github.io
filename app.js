@@ -11,33 +11,33 @@ let cards = []
 const projectData = [
     {
         id: "0",
-        used: "Mostly used: React Hooks, Styled, Formik, REST API",
+        used: "Reviewing Landlords",
         github: '',
-        challenges: "Authentication, backend implementation."
+        challenges: "Reviewing landlords from Lithuania made easy and possible."
     },
     {
         id: "1",
-        used: "Mostly Used: HTML/SCSS",
+        used: "Barbershop For Men",
         github: 'https://github.com/Galvotas/barbershop.git',
-        challenges: "No challenges endured on this project.",
+        challenges: "A modern barbershop for modern people. Client can see barbers and their work, and so make first impression.",
     },
     {
         id: "2",
-        used: "Mostly Used: HTML/SCSS",
+        used: "Italian Cuisine",
         github: 'https://github.com/Galvotas/Restaurant.git',
-        challenges: "This project provided good practice with GRID."
+        challenges: "Website for a restaurant. Modern look with fancy menu helps attracting more clients."
         }, 
     {
         id: "3",
-        used: "Mostly Used: React, REST API, Router",
+        used: "Simple Recipes",
         github: 'https://github.com/Galvotas/Recipes-React.git',
-        challenges: "Great practice with router, global state."
+        challenges: "Simple recipes website made with React."
     },
     {
         id: "4",
-        used: "Mostly Used: HTML, Bootstrap, SCSS",
+        used: "For Tour Lovers",
         github: 'https://github.com/Galvotas/peskom.git',
-        challenges: 'Fun and modern static work for Peškom.lt.'
+        challenges: 'Static website made for Žygis. Designed by Mališauskas studio.'
         }
     ]
 const skillsData = [
