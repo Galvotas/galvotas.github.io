@@ -13,7 +13,7 @@ const projectData = [
         id: "0",
         used: "Reviewing Landlords",
         github: '',
-        challenges: "Reviewing landlords from Lithuania made easy and possible."
+        challenges: "Reviewing landlords from Lithuania made possible and easy."
     },
     {
         id: "1",

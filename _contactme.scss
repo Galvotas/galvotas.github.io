@@ -62,7 +62,7 @@ $blue: #0074d9;
   flex-direction: column;
   .help {
     font-weight: bolder;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem !important;
     border-bottom: 2px solid rgba(221, 219, 219, 0.432);
     display: inline-block;
     position: relative;
@@ -152,6 +152,9 @@ $blue: #0074d9;
       text-align: center;
     }
   }
+  .help {
+    margin: 0 auto;
+  }
   .form {
     grid-template-columns: 1fr;
   }
@@ -163,9 +166,7 @@ $blue: #0074d9;
     margin: 0;
     grid-column: span 2;
   }
-  .help {
-    margin: auto;
-  }
+
   .inputs {
     justify-content: center;
     align-items: center;

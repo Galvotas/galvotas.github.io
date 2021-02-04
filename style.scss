@@ -8,6 +8,11 @@ $black: #000;
 $white: #fff;
 $lightdark: #222;
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(Gilroy-Bold.otf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,9 +27,9 @@ html {
   font-size: 70%;
 }
 body {
-  font-family: "Montserrat", sans-serif;
   position: relative;
   overflow-x: hidden;
+  font-family: 'Work Sans', sans-serif !important;
 }
 .header {
   width: 100%;
@@ -51,36 +56,23 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  h3 {
-    font-size: 2rem;
-    color: rgba(221, 219, 219, 0.432);
-    font-weight: 500;
-    margin-bottom: 1rem;
+  h1 {
+    margin-bottom: 1rem !important;
+    font-size: 3.5rem;
+    font-weight: bolder;
     text-align: center;
     letter-spacing: 0.2rem;
   }
-  h1 {
-    font-size: 3.5rem;
-    font-weight: bolder;
-    margin-bottom: 2rem;
-    text-align: center;
-    letter-spacing: 0.1rem;
+  h3 {
+    margin-bottom: 2rem !important;
+    letter-spacing: 0.2rem;
   }
-  p {
-    line-height: 3rem;
-    font-size: 2rem;
-    text-align: center;
-    letter-spacing: 0.3rem;
-    padding: 1rem 3rem;
-    font-family: "Great Vibes", cursive;
-    font-style: italic;
-  }
+  
 }
 .header-btns {
-  padding: 1rem 0;
   .btn-top {
     padding: 1rem 2.2rem;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
     border-radius: 6rem;
     background-color: transparent;
@@ -102,6 +94,11 @@ body {
     background-color: #fff;
     color: $blue;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: myFirstFont !important;
+  margin-bottom: 0 !important;
 }
 
 @media only screen and (max-width: 1000px) {

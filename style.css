@@ -453,7 +453,7 @@
 
 .contact-center .help {
   font-weight: bolder;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
   border-bottom: 2px solid rgba(221, 219, 219, 0.432);
   display: inline-block;
   position: relative;
@@ -602,6 +602,9 @@
   .contact-header h1 {
     text-align: center;
   }
+  .help {
+    margin: 0 auto;
+  }
   .form {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -612,9 +615,6 @@
     padding: 0;
     margin: 0;
     grid-column: span 2;
-  }
-  .help {
-    margin: auto;
   }
   .inputs {
     -webkit-box-pack: center;
@@ -705,6 +705,11 @@
   font-size: 1.2rem;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url(Gilroy-Bold.otf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -722,9 +727,9 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
   position: relative;
   overflow-x: hidden;
+  font-family: 'Work Sans', sans-serif !important;
 }
 
 .header {
@@ -771,40 +776,22 @@ body {
   width: 100%;
 }
 
-.presentation-con h3 {
-  font-size: 2rem;
-  color: rgba(221, 219, 219, 0.432);
-  font-weight: 500;
-  margin-bottom: 1rem;
+.presentation-con h1 {
+  margin-bottom: 1rem !important;
+  font-size: 3.5rem;
+  font-weight: bolder;
   text-align: center;
   letter-spacing: 0.2rem;
 }
 
-.presentation-con h1 {
-  font-size: 3.5rem;
-  font-weight: bolder;
-  margin-bottom: 2rem;
-  text-align: center;
-  letter-spacing: 0.1rem;
-}
-
-.presentation-con p {
-  line-height: 3rem;
-  font-size: 2rem;
-  text-align: center;
-  letter-spacing: 0.3rem;
-  padding: 1rem 3rem;
-  font-family: "Great Vibes", cursive;
-  font-style: italic;
-}
-
-.header-btns {
-  padding: 1rem 0;
+.presentation-con h3 {
+  margin-bottom: 2rem !important;
+  letter-spacing: 0.2rem;
 }
 
 .header-btns .btn-top {
   padding: 1rem 2.2rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 500;
   border-radius: 6rem;
   background-color: transparent;
@@ -829,6 +816,11 @@ body {
 .header-btns .contact-btn:hover {
   background-color: #fff;
   color: #0074d9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: myFirstFont !important;
+  margin-bottom: 0 !important;
 }
 
 @media only screen and (max-width: 1000px) {
