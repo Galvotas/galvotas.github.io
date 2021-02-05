@@ -37,7 +37,7 @@ const projectData = [
         id: "4",
         used: "For Tour Lovers",
         github: 'https://github.com/Galvotas/peskom.git',
-        challenges: 'Static website made for Žygis. Designed by Mališauskas studio.'
+        challenges: 'Static website made for tour enthusiast. Designed by Mališauskas studio.'
         }
     ]
 const skillsData = [
