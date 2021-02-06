@@ -33,6 +33,8 @@ body {
 }
 .header {
   width: 100%;
+  position: relative;
+  min-height: 80vh;
 }
 .main-con {
   width: 100%;
@@ -57,22 +59,27 @@ body {
   justify-content: center;
   width: 100%;
   h1 {
-    margin-bottom: 1rem !important;
-    font-size: 3.5rem;
     font-weight: bolder;
     text-align: center;
     letter-spacing: 0.2rem;
+    font-size: 70px;
+    margin-bottom: 1rem !important;
   }
-  h3 {
-    margin-bottom: 2rem !important;
-    letter-spacing: 0.2rem;
+  h2 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+    text-align: center;
   }
-  
+  .dot {
+    color: $blue;
+    transition: color 0.1s ease-in-out;
+  }
 }
+
 .header-btns {
   .btn-top {
     padding: 1rem 2.2rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 500;
     border-radius: 6rem;
     background-color: transparent;
@@ -98,8 +105,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: myFirstFont !important;
-  margin-bottom: 0 !important;
 }
+
+.changeDotColor {
+  color: #fff !important;
+}
+
 
 @media only screen and (max-width: 1000px) {
   html {
@@ -145,3 +156,4 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+

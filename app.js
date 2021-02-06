@@ -2,6 +2,10 @@
 const skillCards = document.querySelector('.skill-cards');
 const cardsContainer = document.querySelector('.cards');
 const date = document.querySelector('#date')
+const headerButtons = document.querySelector('.header-btns')
+const heroDot = document.querySelector('.dot')
+
+
 
 date.innerHTML = new Date().getFullYear()
 
@@ -230,6 +234,18 @@ check(e, `card4`, `https://galvotas.github.io/peskom/` )
 check(e, `card3`, `https://galvotas.github.io/Recipes-React/`)
 check(e, `card1`, `https://galvotas.github.io/barbershop/`)
 check(e, `card2`, `https://galvotas.github.io/Restaurant/`)
+})
+
+headerButtons.addEventListener('mouseover', e => {
+    if(e.target.classList.contains('portfolio-btn') || e.target.classList.contains('contact-btn')) {
+        heroDot.classList.toggle('changeDotColor')
+    }
+})
+headerButtons.addEventListener('mouseout', e => {
+    if(e.target.classList.contains('portfolio-btn') || e.target.classList.contains('contact-btn')) {
+        heroDot.classList.remove('changeDotColor')
+
+    }
 })
 
 

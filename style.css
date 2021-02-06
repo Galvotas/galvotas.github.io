@@ -52,7 +52,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 15rem;
   width: 100%;
 }
 
@@ -586,6 +585,13 @@
 }
 
 @media only screen and (max-width: 680px) {
+  .contact-center input {
+    width: 100%;
+  }
+  .inputs {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   .contact-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -616,13 +622,9 @@
     margin: 0;
     grid-column: span 2;
   }
-  .inputs {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .contact-right textarea {
+    width: 100% !important;
+    padding: 0.3rem !important;
   }
 }
 
@@ -734,6 +736,8 @@ body {
 
 .header {
   width: 100%;
+  position: relative;
+  min-height: 80vh;
 }
 
 .main-con {
@@ -777,21 +781,28 @@ body {
 }
 
 .presentation-con h1 {
-  margin-bottom: 1rem !important;
-  font-size: 3.5rem;
   font-weight: bolder;
   text-align: center;
   letter-spacing: 0.2rem;
+  font-size: 70px;
+  margin-bottom: 1rem !important;
 }
 
-.presentation-con h3 {
-  margin-bottom: 2rem !important;
-  letter-spacing: 0.2rem;
+.presentation-con h2 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.presentation-con .dot {
+  color: #0074d9;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 
 .header-btns .btn-top {
   padding: 1rem 2.2rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   border-radius: 6rem;
   background-color: transparent;
@@ -820,7 +831,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: myFirstFont !important;
-  margin-bottom: 0 !important;
+}
+
+.changeDotColor {
+  color: #fff !important;
 }
 
 @media only screen and (max-width: 1000px) {
