@@ -44,11 +44,10 @@ body {
 }
 .mid-con {
   width: 100%;
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 1fr;
-  margin-top: 10rem;
+  min-height: inherit;
 }
 
 .presentation-con {
@@ -58,11 +57,12 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 3rem 0.5rem;
   h1 {
     font-weight: bolder;
     text-align: center;
     letter-spacing: 0.2rem;
-    font-size: 70px;
+    font-size: 6rem;
     margin-bottom: 1rem !important;
   }
   h2 {
@@ -147,6 +147,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .presentation-con {
     width: 100%;
+    h1 {
+      font-size: 5rem;
+    }
   }
   .contact-right {
     .textarea {

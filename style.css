@@ -749,17 +749,16 @@ body {
 
 .mid-con {
   width: 100%;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  margin-top: 10rem;
+  min-height: inherit;
 }
 
 .presentation-con {
@@ -778,13 +777,14 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  padding: 3rem 0.5rem;
 }
 
 .presentation-con h1 {
   font-weight: bolder;
   text-align: center;
   letter-spacing: 0.2rem;
-  font-size: 70px;
+  font-size: 6rem;
   margin-bottom: 1rem !important;
 }
 
@@ -881,6 +881,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .presentation-con {
     width: 100%;
+  }
+  .presentation-con h1 {
+    font-size: 5rem;
   }
   .contact-right .textarea {
     width: 90%;
