@@ -25,12 +25,7 @@ const projectData = [
         github: 'https://github.com/Galvotas/barbershop.git',
         challenges: "A modern barbershop for modern people. Client can see barbers and their work, and so make first impression.",
     },
-    {
-        id: "2",
-        used: "Italian Cuisine",
-        github: 'https://github.com/Galvotas/Restaurant.git',
-        challenges: "Website for a restaurant. Modern look with fancy menu helps attracting more clients."
-        }, 
+    
     {
         id: "3",
         used: "Simple Recipes",
@@ -47,23 +42,23 @@ const projectData = [
 const skillsData = [
     {
 skillName: "HTML",
-iconUrl: "./skill_icons_svg/html-5.svg"
+iconUrl: "icons/html-5.svg"
     },
     {
         skillName: "CSS",
-        iconUrl: "./skill_icons_svg/css-3.svg"
+        iconUrl: "icons/css-3.svg"
     },
     {
         skillName: "JAVASCRIPT",
-        iconUrl: "./skill_icons_svg/js.svg"
+        iconUrl: "icons/js.svg"
     },
     {
         skillName: "REACT",
-        iconUrl: "./skill_icons_svg/react.svg"
+        iconUrl: "icons/react.svg"
     },
     {
         skillName: "REACT HOOKS",
-        iconUrl: "./skill_icons_svg/hooks.svg"
+        iconUrl: "icons/hooks.svg"
     },
     {
         skillName: "FORMIK",
@@ -75,15 +70,15 @@ iconUrl: "./skill_icons_svg/html-5.svg"
     },
     {
         skillName: "STYLED",
-        iconUrl: "./skill_icons_svg/styled_components.svg"
+        iconUrl: "icons/styled_components.svg"
     },
     {
         skillName: "SASS",
-        iconUrl: "./skill_icons_svg/sass.svg"
+        iconUrl: "icons/sass.svg"
     },
     {
         skillName: "MATERIAL-UI",
-        iconUrl: "./skill_icons_svg/letter-m.svg"
+        iconUrl: "icons/letter-m.svg"
     },
     {
         skillName: "MATERIALIZE CSS",
@@ -91,15 +86,15 @@ iconUrl: "./skill_icons_svg/html-5.svg"
     },
     {
         skillName: "BOOTSTRAP",
-        iconUrl: "./skill_icons_svg/bootstrap.svg"   
+        iconUrl: "icons/bootstrap.svg"   
     },
     {
         skillName: "REDUX",
-        iconUrl: "./skill_icons_svg/redux.svg"
+        iconUrl: "icons/redux.svg"
     },
     {
         skillName: "GIT",
-        iconUrl: "./skill_icons_svg/git.svg"
+        iconUrl: "icons/git.svg"
     },
     {
         skillName: "STRAPI",
@@ -107,31 +102,10 @@ iconUrl: "./skill_icons_svg/html-5.svg"
     },
     {
         skillName: "RESPONSIVE DESIGN",
-        iconUrl: "./skill_icons_svg/responsive-design-symbol.svg"
+        iconUrl: "icons/responsive-design-symbol.svg"
     },
     
 ]
-
-/*$("#contactForm").on("submit", function(e) {
-
-    e.preventDefault(); //Prevents default submit
-    var form = $(this);
-    var post_url = form.attr("action");
-    var post_data = form.serialize(); //Serialized the form data for process.php
-    $("#loader", form).html(
-      '<img src="../img/loader.gif" /> Prašome palaukti...'
-    );
-    $.ajax({
-      type: "POST",
-      url: "process.php", // Your form script
-      contentType: "application/json; charset=utf-8",
-      data: post_data,
-      success: function(msg) {
-        $("#mailResponseText").html(msg)
-        $('#submitBtn').prop('disabled', true)
-      }
-    }); 
-  });*/
 
 function check(element, classname, link) {
     if(element.target.classList.contains(`${classname}`))  {
@@ -231,7 +205,6 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('click', (e) => {
     check(e, `card0`, `https://tanuoma.lt/`)
 check(e, `card4`, `https://peskom.lt/` )
-check(e, `card3`, `https://galvotas.github.io/Recipes-React/`)
 check(e, `card1`, `https://galvotas.github.io/barbershop/`)
 check(e, `card2`, `https://galvotas.github.io/Restaurant/`)
 })

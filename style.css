@@ -155,26 +155,28 @@
   color: #fff;
 }
 
+.card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .card0 {
-  background-image: url(landlordreviews.jpg);
+  background-image: url(../images/landlordreviews.jpg);
   position: relative;
   opacity: 0.5;
 }
 
 .card1 {
-  background-image: url(barbershop.jpg);
+  background-image: url(../images/barbershop.png);
 }
 
 .card2 {
-  background-image: url(restaurant.jpg);
+  background-image: url(../images/restaurant.jpg);
 }
 
 .card3 {
-  background-image: url(RecipesReact.jpg);
-}
-
-.card4 {
-  background-image: url(peskom.jpg);
+  background-image: url(../images/peskom.jpg);
 }
 
 .github-link {
