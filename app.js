@@ -204,7 +204,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('click', (e) => {
     check(e, `card0`, `https://tanuoma.lt/`)
-check(e, `card4`, `https://peskom.lt/` )
+check(e, `card3`, `https://peskom.lt/` )
 check(e, `card1`, `https://galvotas.github.io/barbershop/`)
 check(e, `card2`, `https://galvotas.github.io/Restaurant/`)
 })
