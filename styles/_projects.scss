@@ -51,7 +51,6 @@
   &:hover {
     opacity: 0.8;
   }
-  
 }
 
 .project-description {
@@ -67,13 +66,12 @@
   transition: all 0.2s ease-in-out;
   z-index: 1;
   padding: 0.8rem 1rem;
-  transform-origin: bottom ;
+  transform-origin: bottom;
   background-color: rgba(51, 51, 51, 0.616);
   visibility: hidden;
   overflow: hidden;
-  
 }
-.description-heading { 
+.description-heading {
   padding: 0.4rem 0;
   border-bottom: 1px solid #0074d93f;
   z-index: -1;
@@ -85,15 +83,15 @@
 }
 
 .card {
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card0 {
   background-image: url(../images/landlordreviews.jpg);
   position: relative;
- opacity: 0.5;
+  opacity: 0.5;
 }
 .card1 {
   background-image: url(../images/barbershop.png);
@@ -104,6 +102,9 @@ background-repeat: no-repeat;
 
 .card3 {
   background-image: url(../images/peskom.jpg);
+}
+.card4 {
+  background-image: url(../images/covid19.jpg);
 }
 
 .github-link {
